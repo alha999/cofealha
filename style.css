@@ -1,0 +1,482 @@
+:root {
+    --primary: #b6895b;
+    --bg: #010101;
+}
+ 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline:none ;
+    border: none;
+    text-decoration: none;
+}
+
+body {
+    font-family: 'poppins', sans-serif;
+    background-color: var(--bg);
+    color: #fff;
+
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+/*Bagian Navbar*/
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 7%;
+    background-color:rgba(1 ,1, 1, 0.8);
+    border-bottom: 1px solid #4e3317;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 9999;
+
+
+}
+
+  .navbar .navbar-logo {
+  font-size: 2rem;
+  font-weight: 600;
+  color: #fff;
+  font-style: italic;
+
+}
+
+.navbar .navbar-logo span {
+    color: var(--primary);
+}
+
+.navbar .navbar-nav a{
+    color: var(--primary);
+    display: inline-block;
+font-size: 1.3rem;
+margin: 0 1.1rem;
+}
+
+.navbar .navbar-nav a:hover {
+    color: #fff;
+}
+
+.navbar  .navbar-nav a::after {
+    content: '';
+    display: block;
+    padding-bottom: 0.3;
+    border-bottom: 0.1rem solid var(--primary);
+    transform: scaleX(0);
+    transition: 0.2s linear;
+}
+
+.navbar .navbar-nav a:hover::after  {
+    transform: scaleX(0.5);
+}
+
+.navbar .navbar-extra a {
+    color:#fff;
+margin: 0.5rem;
+}
+
+.navbar .navbar-extra a:hover {
+    color: var(--primary);
+}
+
+#hamburger-menu {
+    display: none;
+
+}
+
+
+/* bagian contact */
+ .contact .row {
+    display: flex;
+    margin-top: 3rem;
+    background-color: var(--bg);
+    border: 7px solid var(--primary);
+
+ }
+ .contact .row .map{
+    flex:  1 1 45rem;
+    width: 100%;
+    object-fit: cover;
+ }
+
+
+ .contact .row form {
+    flex: 1 1 45rem;
+    padding: 5rem 2rem;
+    text-align: center;
+ }
+
+
+ .contact .row form .input-grup{
+    display: flex;
+    align-items: center;
+    margin-top: 1.5rem;
+    background-color: var(--bg);
+    border: 3px solid #eee;
+    padding-left: 2rem;
+ }
+
+ .contact .row form .input-grup input{
+    width: 100%;
+    padding: 1rem;
+    font-size: 1.5rem;
+    background: none;
+    color: #eee;
+ }
+ 
+ .contact .row form  .btn {
+
+    margin-top: 2rem;
+    display: inline-block;
+    padding: 1rem 3rem;
+    font-size: 2rem;
+    background-color: var(--primary);
+    color: #fff;
+    border-radius: 8px;
+    cursor: pointer;
+ }
+
+
+
+
+ /* css bagian footer */
+ footer {
+    background: var(--primary);
+    text-align: center;
+    padding: 1rem 2rem 2rem;
+    margin-top: 5rem;
+ }
+
+
+
+ footer .sosial {
+    padding: 1rem 2rem;
+ }
+
+   footer .sosial a {
+    color: #eee;
+    margin: 0.5rem;
+ }
+
+ footer .sosial a:hover{
+    color: var(--bg);
+ }
+
+
+ footer .links {
+margin-bottom: 1.5rem;
+ }
+
+
+ footer .links a {
+    color: #eee;
+    padding: 1rem 1rem;
+    margin-top: 1rem;
+    
+
+ }
+
+ footer .links a:hover{
+    color: var(--bg);
+ }
+
+
+ footer .credit{
+    font-size: 1rem;
+ }
+
+footer .credit a{
+    color: var(--bg);
+    font-weight: 700;
+}
+
+/* media queriz*/
+
+/* hendphone*/
+@media(max-width: 450px){
+    html {
+        font-size: 55%;
+    }
+}
+
+
+/* laptop*/
+@media(max-width: 1366px){
+    html {
+        font-size: 75%;
+    }
+}
+
+
+/* tablet*/
+@media(max-width: 768px){
+    html {
+        font-size: 60%;
+    }
+    #hamburger-menu  {
+        display: inline-block;
+    }
+
+    .navbar .navbar-nav {
+        position: absolute;
+        top: 100%;
+        right: -100%;
+        background-color:var(--bg) ;
+        width: 20rem;
+        height: 100vh;
+        transition: 0.4;
+    }
+     .navbar .navbar-nav.active {
+        right: 0;
+     }
+.navbar .navbar-nav a {
+    color: var(--primary);
+    display: block;
+    margin:1.9rem;
+    font-size: 2rem;
+    padding: 0.5rem;
+
+   
+
+
+}
+
+.navbar .navbar-nav a::after{
+        transform-origin: 0 0;
+}
+
+.navbar .navbar-nav a:hover::after{
+transform: scaleX(0.2);
+}
+
+.about .row {
+    flex-wrap: wrap;
+}
+ .about .row .about-img img{
+    height: 30rem;
+    padding: 1rem 1rem;
+    object-fit: cover;
+    object-position: center;
+ }
+
+ .abut .row .content {
+    padding: 0;
+ }
+
+ .menu p{
+    font-size: 1.4rem;
+ }
+
+
+ .contact .row {
+    flex-wrap: wrap;
+ }
+
+ .contact .row .map {
+    height: 30rem;
+ }
+
+ .contact .row  form {
+    padding-top: 0;
+ }
+}
+
+
+/*bagian css hero sestion*/
+
+
+.hero{
+    
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        background-image: url('/img/bg.png');
+        background-size: cover; /* Pastikan gambar menyesuaikan ukuran */
+        background-position: center; /* Posisikan gambar ke tengah */
+        background-repeat: no-repeat; /* Jangan ulang gambar */
+    position: relative;
+    
+}
+
+.hero::after {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 30%;
+    bottom: 0;
+    background: linear-gradient(0deg,rgba(1,1,3,1)8%, rgba(255,255,225,0) 50%);
+
+}
+
+.hero .content{
+    padding: 1.4rem 7%;
+    max-width:60rem ;
+} 
+
+.hero .content h1 {
+    font-size: 5rem;
+    color: #fff;
+    text-shadow: 1px 1px 3px rgba(1 ,1, 1, 0.5);
+    line-height: 1.1;
+}
+
+.hero .content h1 span {
+    color: var(--primary);
+}
+
+.hero .content p {                              
+    font-size: 1.5rem;
+    margin-top: 1rem;
+    line-height: 1.5rem;
+    font-weight: 500;
+    text-shadow: 1px 1px 3px rgba(1 ,1, 1, 0.5);
+    mix-blend-mode: difference;
+
+
+}
+
+.hero .content a{
+    margin-top: 1rem;
+    display: inline-block;
+    padding: 1rem 3rem;
+    font-size: 1.5rem;
+    color: black;
+    background-color: var(--primary);
+    border-radius: 1rem;
+    box-shadow: 1px 1px 3px rgba(1 ,1, 3, 0.5);
+
+}
+
+
+
+/*bagian css about(tentang kami)*/
+
+.about,
+.menu h2,
+.contact  {
+    /* padding: 6rem 15%; */
+    padding: 7rem 7% 1.4rem;
+}
+
+.about h2 ,
+.menu h2,
+.contact h2{
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+} 
+
+.about h2 span ,
+.menu h2  span,
+.contact h2 span{
+    color: var(--primary);
+}
+
+
+.about .row{
+display: flex;
+
+}
+
+.about .row .about-img {
+    flex: 1 1 45rem;
+
+}
+
+.about .row .about-img img {
+    width: 95%;
+    height: 50%;
+position: relative;
+}
+
+.about .row .content {
+    flex: 1 1 35rem;
+    padding: 0 1rem;
+
+}
+
+.about .row .content h3{
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.about .row .content span {
+    color: var(--primary);
+}
+
+.about .row .content p {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    font-weight:400;
+    line-height: 2rem;
+}
+ 
+/*bagian css menu*/
+
+.menu h2,
+.contact h2{
+margin-bottom: 0.5rem;
+
+}
+
+
+.menu p,
+.contact p {
+    text-align: center;
+    font-weight: 300;  /*ketebalan huruf*/
+    line-height: 1.5 ;     /*mengatur tinggi baris teks jarak vertikal*/
+    max-width: 30rem;
+    margin: auto;
+    /* font-size: 1.5rem; */
+
+}
+
+.menu .row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 4rem;
+    justify-content: center;
+}
+
+ .menu .row .menu-crad{
+ 
+    text-align: center;
+    margin-bottom: 5rem;
+ }
+
+
+.menu .row .menu-crad img {
+    border-radius: 60%;
+    width: 80%;
+
+}
+
+.menu .row .menu-crad-title{
+    margin: 1rem auto 1rem ;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
